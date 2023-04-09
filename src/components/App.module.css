@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerContainer{
+    max-width: 920px;
+    margin: 40px auto;
+ 
+}
+
+.container{
+    display: flex;
+    max-width: 920px;
+    margin: auto;
+   
+}
+.container .leftSide{
+    flex : 1;
+    margin-right: 40px;
+ 
+}
+
+.container .rightSide{
+ flex: 1;
+ margin-left: 40px;
+ display: flex;
+}
+
+.container .leftSide h1{
+    font-size: 40px;
+    color: #3A5b5c;
+    margin: 0;
+}
+
+
+.container .leftSide p{
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: #6A7D8B;
+}
+
+.container .leftSide input{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgba(150, 163, 171, .5);
+    padding: 10px 2px;
+    margin-bottom: 10px;
+    outline: none;
+}
+.container .leftSide button{
+    background-color: #227c90;
+    color: white;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: 500ms;
+}
+.container .leftSide button:hover{
+    opacity: .8;
+}
+ 
+
+.container .rightSide .grid{
+    flex:1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+ 
+}
+.container .rightSide .rightBig{
+    flex: 1;
+    display: flex;
+    animation: bigAnime 0.3s forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+@keyframes bigAnime{
+    to{
+        opacity: 1;
+        transform: initial;
+    }
+}
+
+
+.container .rightSide img{
+    width: 100%;
+    border-radius: 50%;
+}
+.container .rightSide .rightArrow{
+    background-color: royalblue;
+    padding: 15px;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+    margin-left: -36px;
+    margin-top: 140px;
+    transition: 500ms;
+}
+.container .rightSide .rightArrow:hover{
+    background-color: rgba(0, 74, 121, 1);
+}
+
+@media(max-width: 920px){
+    .container{
+         flex-direction: column;
+         padding: 10px;
+        }
+    .container .leftSide{
+        margin: 0;
+        margin-bottom: 50px;
+    }
+    .container .rightSide{
+        
+        margin: 0;
+    }
+    .container .rightArrow img{
+       
+    }
+    .container .rightSide .rightArrow{
+        margin: 0;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+}
